@@ -5,7 +5,7 @@ authors:
   - family-names: "B."
     given-names: Radoslaw
 repository-code: "https://github.com/rbrus/agent-redteam-benchmark"
-url: "https://rbrus.github.io/agent-redteam-benchmark-findings/"
+url: "https://radek-sixi.github.io/agent-redteam-benchmark-findings/"
 license: Apache-2.0
 date-released: 2026-10-06
 keywords:
