@@ -1,6 +1,6 @@
 """Open-source sixi-scanner scan output -> the benchmark's self_report.json.
 
-The open-source build (github.com/rbrus/sixi-scanner) reports differently from the licensed build the
+The open-source build (github.com/radek-sixi/sixi-scanner) reports differently from the licensed build the
 earlier runs used, so it needs its own adapter rather than tools/sixi-scanner/parse_results.py:
 
 * the JSON report carries `findings` (each with the exact prompt and reply behind it) and an

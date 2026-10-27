@@ -1,6 +1,6 @@
 # Lab — sixi-scanner (open-source build)
 
-**Goal:** run the publicly released [sixi-scanner](https://github.com/rbrus/sixi-scanner) against the
+**Goal:** run the publicly released [sixi-scanner](https://github.com/radek-sixi/sixi-scanner) against the
 Foundry agent through the benchmark gateway, on the same terms as every other tool in the leaderboard.
 
 This is a **different artefact from the licensed build** the earlier runs used
@@ -11,7 +11,7 @@ results, not in a footnote.
 ## 1. Install
 
 ```bash
-git clone https://github.com/rbrus/sixi-scanner && cd sixi-scanner
+git clone https://github.com/radek-sixi/sixi-scanner && cd sixi-scanner
 make build          # -> ./sixi-scanner, no dependencies to fetch
 ./sixi-scanner version
 ```

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # agent-probe against the benchmark gateway.  Usage: tools/agent-probe/run.sh <run_dir> [--smoke]
-#   AGENT_PROBE_BIN  path to the agent-probe binary (go install github.com/rbrus/agent-probe/cmd/agent-probe@latest)
+#   AGENT_PROBE_BIN  path to the agent-probe binary (go install github.com/radek-sixi/agent-probe/cmd/agent-probe@latest)
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 RUN_DIR="${1:?run_dir}"; SMOKE="${2:-}"

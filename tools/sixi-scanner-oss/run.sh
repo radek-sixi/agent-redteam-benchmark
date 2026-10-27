@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Open-source sixi-scanner (github.com/rbrus/sixi-scanner) against the benchmark gateway.
+# Open-source sixi-scanner (github.com/radek-sixi/sixi-scanner) against the benchmark gateway.
 #
 #   tools/sixi-scanner-oss/run.sh <run_dir> <label> [--rounds N] [--attempts N] [--multiturn]
 #                                 [--only ID[,ID...]]

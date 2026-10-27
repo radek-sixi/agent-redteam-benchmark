@@ -218,7 +218,7 @@ For each tool, from the gateway log:
 ### The open-source sixi-scanner run (2026-10-05)
 
 * **A second, differently-labelled sixi build was benchmarked (2026-10-05).** `sixi-oss` is the
-  publicly released scanner (`github.com/rbrus/sixi-scanner`, `v0.3.0` at `50d0bdf`), not the
+  publicly released scanner (`github.com/radek-sixi/sixi-scanner`, `v0.3.0` at `50d0bdf`), not the
   licensed build the `sixi-scanner` rows measure. It is 21 techniques / 71 payloads with no LLM in
   it — no attacker model, no confirmation pass, no multi-turn, no sessions. It runs under its own
   label so both builds appear on the leaderboard without either being overwritten.

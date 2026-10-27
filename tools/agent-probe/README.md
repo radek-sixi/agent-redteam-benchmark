@@ -2,7 +2,7 @@
 
 **Goal:** run agent-probe's fixed battery of 12 OWASP LLM probes against the Foundry agent.
 
-[agent-probe](https://github.com/rbrus/agent-probe) is a small, dependency-free Go scanner (Apache-2.0):
+[agent-probe](https://github.com/radek-sixi/agent-probe) is a small, dependency-free Go scanner (Apache-2.0):
 12 hand-written probes for prompt injection, system prompt leakage, jailbreaks, secret extraction,
 tool abuse and output handling. Each probe decides by looking for its signature string in the reply.
 It needs no attacker model. It is included as the minimal baseline: the least a scanner can do.
@@ -10,8 +10,8 @@ It needs no attacker model. It is included as the minimal baseline: the least a 
 ## 1. Install
 
 ```bash
-go install github.com/rbrus/agent-probe/cmd/agent-probe@latest
-# or: git clone https://github.com/rbrus/agent-probe && go build -o agent-probe ./cmd/agent-probe
+go install github.com/radek-sixi/agent-probe/cmd/agent-probe@latest
+# or: git clone https://github.com/radek-sixi/agent-probe && go build -o agent-probe ./cmd/agent-probe
 ```
 
 ## 2. Run

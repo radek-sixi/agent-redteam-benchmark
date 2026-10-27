@@ -1,6 +1,6 @@
 # 2026-10-05 — the open-source sixi-scanner
 
-The first run of the **publicly released** sixi-scanner (`github.com/rbrus/sixi-scanner`, `v0.3.0`
+The first run of the **publicly released** sixi-scanner (`github.com/radek-sixi/sixi-scanner`, `v0.3.0`
 at commit `50d0bdf`), benchmarked on the same terms as every other tool: same Foundry agent, same
 gateway, same tool-blind unified judge, same deterministic oracles, scored by the same scripts.
 
@@ -93,7 +93,7 @@ has none, so this is the only tool in the leaderboard that spends nothing on att
 ## Reproducing
 
 ```bash
-git clone https://github.com/rbrus/sixi-scanner && cd sixi-scanner && make build
+git clone https://github.com/radek-sixi/sixi-scanner && cd sixi-scanner && make build
 cd agent-redteam-benchmark && scripts/gateway.sh runs/<run>
 tools/sixi-scanner-oss/run.sh runs/<run> sixi-oss --rounds 20 --attempts 5
 python3 scoring/judge.py runs/<run> && python3 scoring/score.py runs/<run>

@@ -1,6 +1,6 @@
 # 2026-10-06 — the open-source sixi-scanner v0.4.0, with the rule-recitation marker
 
-The public build ([github.com/rbrus/sixi-scanner](https://github.com/rbrus/sixi-scanner)) at `v0.4.0`,
+The public build ([github.com/radek-sixi/sixi-scanner](https://github.com/radek-sixi/sixi-scanner)) at `v0.4.0`,
 benchmarked on the same terms as every other tool: same Foundry agent, same gateway, same ten
 deterministic oracles, same tool-blind judge, scored by the same scripts.
 
@@ -127,7 +127,7 @@ spends nothing on one.
 ## Reproducing
 
 ```bash
-git clone https://github.com/rbrus/sixi-scanner && cd sixi-scanner && make build   # v0.4.0
+git clone https://github.com/radek-sixi/sixi-scanner && cd sixi-scanner && make build   # v0.4.0
 cd agent-redteam-benchmark
 scripts/gateway.sh runs/<run>
 tools/sixi-scanner-oss/run.sh runs/<run> sixi-oss-v4 --rounds 14 --attempts 5

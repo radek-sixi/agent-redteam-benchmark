@@ -103,7 +103,7 @@ All KPIs are defined in [PROTOCOL §5](docs/PROTOCOL.md).
 
 ## sixi-scanner: the author's tool, measured on the same wire
 
-[sixi-scanner](https://github.com/rbrus/sixi-scanner) is open source: a single Go binary with zero
+[sixi-scanner](https://github.com/radek-sixi/sixi-scanner) is open source: a single Go binary with zero
 dependencies, 27 techniques and no LLM in it. It runs through the same gateway, oracles and judge as
 everything above. Current release is v0.8.3.
 
@@ -140,7 +140,7 @@ denominator moved, a coverage loss, or both, and the column cannot tell you whic
 | v0.8.1 | multi-turn probes, a session connector, 4 agentic-autonomy techniques. [measured](results/2026-10-11-sixi-oss-v80/README.md) — worse than v0.6.0 on both metrics, published rather than dropped; first oracle codes |
 | v0.7.0 / v0.7.1 | false-action-claim, adjudicated against the tool trace. [measured negative](results/2026-10-10-sixi-oss-v71/README.md) — inert against this target, which exposes no trace, and too coarse against one that does |
 
-It runs in CI as [`rbrus/scan-action@v2`](https://github.com/rbrus/scan-action).
+It runs in CI as [`radek-sixi/scan-action@v2`](https://github.com/radek-sixi/scan-action).
 
 <!-- headline-run: results/2026-10-12-sixi-oss-v83 -->
 | sixi-scanner v0.8.3 | measured | against the baseline leaderboard |
