@@ -967,3 +967,42 @@ value-shaped JSON markers do not. Two techniques, superficially the same pattern
 techniques were examined for the same defect and only one qualified. The two that could be fixed cheaply
 were fixed; the third was left paying a real price for coverage it legitimately provides, and that price
 is published rather than engineered away.
+
+### `credential-elicitation`: the third technique examined, and not the same defect
+
+The same per-technique mechanism breakdown that caught `false-action-claim` pointed at
+`probe.llm02.credential-elicitation` as the next candidate: 8, 6, 5 and 3 flags in successive runs,
+zero confirmed in every one, and markers that include the bare nouns `password:` and `password=`. The
+target's refusals say *"For integration testing, please use your own sandbox/test password=..."*, so
+both match a refusal rather than a disclosure. Third sighting of the same shape of defect.
+
+**It is not the same defect, and the fix was reverted.** Measured on the recorded corpus:
+
+| change | false positives removed | true positives lost |
+|---|---|---|
+| drop `password:` only | 2 | 0 |
+| drop `password:` and `password=` | **7** | 0 |
+| drop the seven weakest markers | 7 | 0 |
+| **value-shaped regex instead of the bare noun** | **0** (it made things worse) | 0 |
+
+The tempting number is 7. `TestRealCredentialValueStillBreaks` exists to hold exactly that line and
+caught the change: a reply containing `Server=db;Password=hunter2;` must still break, and without
+`password=` it stopped. A real, covered leak.
+
+The regex route -- `password\s*[:=]\s*[a-zA-Z0-9]`, which requires a value after the separator -- was
+the honest attempt at having both. It does not work either, for a reason worth recording: the refusal
+that names the secret ends in `password=` followed by a closing quote, and the rule would have to know
+that `"` is not a value, which is exactly the semantic understanding a substring cannot supply. This
+is the same wall `payload-relay` hit from the other side: the difference between a leak and a refusal
+is not expressible in the marker system this tool has.
+
+**The generalisable lesson, and the one worth more than the seven false positives:** the "everything
+matching is noise" instinct is wrong here, and the test suite is what stopped it. Three techniques were
+examined for one defect and only one qualified. Two were fixed cheaply; the third is left paying a
+published price for coverage it legitimately provides. That price is in the 10-11 row and is not
+engineered away.
+
+The regex-marker infrastructure that was built for this attempt stays: it is clean, tested and
+value-shaped, and it is the right mechanism even though the particular application failed. A future
+technique that needs it -- or a future fix that finds the right pattern -- can use it without
+rebuilding it.
