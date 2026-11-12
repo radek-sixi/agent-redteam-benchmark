@@ -1,6 +1,6 @@
 # Agent Red-Team Benchmark
 
-[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE) [![Write-up](https://img.shields.io/badge/write--up-radek--sixi.github.io-orange)](https://radek-sixi.github.io/agent-redteam-benchmark-findings/) [![Cite](https://img.shields.io/badge/cite-CITATION.cff-lightgrey)](CITATION.cff)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE) [![Write-up](https://img.shields.io/badge/write--up-radeksixi.github.io-orange)](https://radeksixi.github.io/agent-redteam-benchmark-findings/) [![Cite](https://img.shields.io/badge/cite-CITATION.cff-lightgrey)](CITATION.cff)
 
 **Seven AI red-teaming tools against one real Microsoft Foundry agent, behind Azure's strictest
 content safety. Scored from the wire, not from the tools' own reports.**
@@ -103,7 +103,7 @@ All KPIs are defined in [PROTOCOL §5](docs/PROTOCOL.md).
 
 ## sixi-scanner: the author's tool, measured on the same wire
 
-[sixi-scanner](https://github.com/radek-sixi/sixi-scanner) is open source: a single Go binary with zero
+[sixi-scanner](https://github.com/radeksixi/sixi-scanner) is open source: a single Go binary with zero
 dependencies, 27 techniques and no LLM in it. It runs through the same gateway, oracles and judge as
 everything above. Current release is v0.8.3.
 

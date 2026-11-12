@@ -43,7 +43,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/radek-sixi/sixi-scanner/internal/tech/baseline"
+	"github.com/radeksixi/sixi-scanner/internal/tech/baseline"
 )
 
 type corpusRow struct {
